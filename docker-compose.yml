@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - '8080:80'
+    restart: always
+# Explanation:
+#
+# version: '3.8'
+# This specifies the version of the Docker Compose file format. Version 3.8 is compatible with newer versions of Docker Compose.
+#
+# services:
+# The services block defines all the containers (services) that Docker Compose will run. In this case, there's only one service: app.
+#
+# app:
+# This is the name of the service. It can be any name you want, and it will refer to the container that you are building and running. You could name it frontend, backend, or anything else depending on your app's structure.
+#
+# build: .
+# This tells Docker Compose to build the Docker image for the service from the Dockerfile in the current directory (. refers to the current directory). So, it will look for a Dockerfile in the directory where docker-compose.yml is located.
+#
+# ports:
+#
+#     "8080:80"
+#     This maps port 8080 on your host machine to port 80 inside the container. In other words:
+#         When you access http://localhost:8080, it will route the traffic to port 80 inside the container where Nginx is serving your app.
+#         You can choose any available port on your local machine (here 8080), but port 80 is the standard HTTP port that Nginx will listen on inside the container.
+#
+# restart: always
+# This defines the restart policy for the container. With always, if the container crashes or stops, Docker will automatically restart it. This is useful for ensuring that your service stays running continuously.
