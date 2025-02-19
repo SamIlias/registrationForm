@@ -7,7 +7,6 @@ services:
       - '8080:80'
     restart: always
 # Explanation:
-#
 # version: '3.8'
 # This specifies the version of the Docker Compose file format. Version 3.8 is compatible with newer versions of Docker Compose.
 #

@@ -1,26 +1,15 @@
 install:
 	npm install
 
-test:
-	npm test
-
-http-server:
-	npx http-server ./dist
-	
 bundle:
 	npm run build
 
-# build-image:
-# 	docker build -t registration-form .
-#
-# run: build-image
-# 	docker run -d -p 8080:80 registration-form
-#
-# deploy: bundle build-image run
+http-server:
+	npx http-server ./dist
 
-build:
+runApp:
 	docker-compose up --build -d
 
-stop-conteiners:
+stop-containers:
 	docker-compose down
 

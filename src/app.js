@@ -84,21 +84,6 @@ export default async () => {
   });
 
   // Define validation schemas
-  // const nameSchema = yup.string().min(3).max(10).required();
-  // const passwordSchema = yup.string().min(6).max(12).required();
-  // const confirmPasswordSchema = yup
-  //   .string()
-  //   .oneOf([yup.ref('password')], { key: 'mustMatch' })
-  //   .required();
-  //
-  // const validateValue = async (schema, value, handleError) => {
-  //   try {
-  //     await schema.validate(value);
-  //   } catch (err) {
-  //     handleError(err);
-  //   }
-  // };
-
   const validationSchema = yup.object({
     username: yup.string().min(3).max(10).required(),
     password: yup.string().min(6).max(12).required(),
