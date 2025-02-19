@@ -1,4 +1,4 @@
-# This mini project based on Hexlet [challenge:](https://ru.hexlet.io/challenges/js_frontend_architecture_table_sort_exercise)
+# This mini project based on Hexlet [challenge:](https://ru.hexlet.io/challenges/js_frontend_architecture_signup_form_exercise)
 
 <br>  
 The following technologies were used:
